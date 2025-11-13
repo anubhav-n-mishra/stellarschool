@@ -1,0 +1,106 @@
+/* Polished professional styles */
+:root{
+  --accent:#0b5cff; /* deep blue */
+  --accent-2:#0a3ed6;
+  --muted:#6b7280;
+  --bg:#f5f8ff;
+  --card:#ffffff;
+  --radius:12px;
+  --max:1200px;
+  --glass: rgba(255,255,255,0.7);
+  font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{margin:0;background:linear-gradient(180deg,var(--bg),#fff);color:#0f172a;line-height:1.5;-webkit-font-smoothing:antialiased}
+.container{max-width:var(--max);margin:0 auto;padding:2rem}
+
+.topbar{background:linear-gradient(90deg,var(--accent) 0%, var(--accent-2) 100%);color:#fff}
+.topbar-inner{display:flex;justify-content:space-between;align-items:center;padding:0.5rem 1rem;font-size:0.95rem}
+.school-badges .badge{background:rgba(255,255,255,0.12);padding:0.2rem 0.5rem;border-radius:6px;margin-left:0.5rem}
+
+.site-header{background:transparent;position:sticky;top:0;z-index:60;backdrop-filter:blur(6px)}
+.header-inner{display:flex;align-items:center;justify-content:space-between;padding:1rem 0}
+.logo{font-weight:800;font-size:1.35rem;color:#07205a;text-decoration:none}
+.logo .accent{color:var(--accent)}
+.nav{display:flex;gap:1rem;align-items:center}
+.nav a{color:#07205a;text-decoration:none;padding:0.6rem;border-radius:8px}
+.nav a:hover{background:rgba(11,92,255,0.06)}
+.header-actions{display:flex;gap:0.5rem;align-items:center}
+.btn{display:inline-flex;align-items:center;gap:0.5rem;border-radius:10px;padding:0.6rem 1rem;text-decoration:none;border:1px solid transparent;font-weight:600}
+.btn.small{padding:0.35rem 0.6rem;font-size:0.9rem}
+.btn-primary{background:var(--accent);color:#fff;box-shadow:0 6px 18px rgba(11,92,255,0.12)}
+.btn-outline{background:transparent;border:1px solid rgba(11,92,255,0.12);color:var(--accent)}
+.btn:focus{outline:3px solid rgba(11,92,255,0.12)}
+.mobile-toggle{display:none;background:transparent;border:0;font-size:1.25rem}
+
+.hero{padding:3.5rem 0}
+.hero-grid{display:grid;grid-template-columns:1fr 520px;gap:2rem;align-items:center}
+.hero-content h1{font-family:'Playfair Display', serif;font-size:2.4rem;margin:0 0 0.6rem;color:#05204a}
+.lead{color:var(--muted);margin:0 0 1rem;font-size:1.05rem}
+.hero-ctas{display:flex;gap:0.75rem;margin-bottom:1rem}
+.trust-list{display:flex;gap:0.75rem;list-style:none;padding:0;margin:1rem 0 0}
+.trust-list li{background:#fff;padding:0.5rem 0.75rem;border-radius:10px;box-shadow:0 6px 20px rgba(2,6,23,0.06);font-weight:600}
+.hero-meta{margin-top:0.8rem;display:flex;gap:0.6rem;align-items:center}
+.hero-img{width:100%;height:320px;background-size:cover;background-position:center;border-radius:14px;box-shadow:0 20px 40px rgba(2,6,23,0.06)}
+
+.about h2,.programs h2,.admissions h2,.testimonials h2,.faq h2{margin-top:0}
+.features-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+.features-grid article{background:var(--card);padding:1.1rem;border-radius:12px;box-shadow:0 10px 30px rgba(2,6,23,0.05)}
+
+.program-list{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem}
+.program{background:linear-gradient(180deg,#fff,#fbfcff);padding:1rem;border-radius:12px;box-shadow:0 8px 28px rgba(2,6,23,0.04)}
+
+.admissions-grid{display:grid;grid-template-columns:1fr 360px;gap:1.5rem;align-items:start}
+.apply-form{background:var(--card);padding:1.25rem;border-radius:12px;box-shadow:0 12px 40px rgba(2,6,23,0.06)}
+.apply-form label{display:block;margin-bottom:0.6rem;font-size:0.95rem}
+.apply-form input,.apply-form select{width:100%;padding:0.7rem;border-radius:10px;border:1px solid #e9f0ff;margin-top:0.4rem}
+.form-actions{display:flex;gap:0.5rem;margin-top:0.8rem}
+.admissions-info{background:transparent}
+.stats{display:flex;gap:1rem;margin-top:1rem}
+.stats div{background:#fff;padding:0.7rem 1rem;border-radius:10px;text-align:center;min-width:90px;box-shadow:0 8px 24px rgba(2,6,23,0.04)}
+.counter{font-weight:800;font-size:1.2rem;color:var(--accent)}
+
+.testimonial-carousel{position:relative;padding:1rem 3rem}
+.carousel-viewport{overflow:hidden;width:100%}
+.carousel-track{list-style:none;padding:0;margin:0;display:flex;transition:transform 520ms cubic-bezier(.22,.9,.36,1);will-change:transform}
+.carousel-track .card{flex:0 0 100%;box-sizing:border-box;padding:1.5rem 2rem;background:#fff;border-radius:12px;box-shadow:0 12px 36px rgba(2,6,23,0.06);display:flex;align-items:center}
+.carousel-track .card p{margin:0;color:#07205a;font-size:1.05rem;line-height:1.6}
+.carousel-track .card cite{display:block;margin-top:0.6rem;color:var(--muted);font-style:italic}
+.carousel-prev,.carousel-next{position:absolute;top:50%;transform:translateY(-50%);background:transparent;border:0;font-size:1.9rem;color:var(--accent);cursor:pointer;padding:0.25rem}
+.carousel-prev{left:1rem}
+.carousel-next{right:1rem}
+
+.faq-list details{background:#fff;padding:1rem;border-radius:10px;margin-bottom:0.6rem;box-shadow:0 8px 30px rgba(2,6,23,0.04)}
+
+.site-footer{margin-top:2.5rem;padding:2rem 0;background:transparent}
+.footer-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1rem}
+.footer-nav a{display:block;color:var(--muted);text-decoration:none}
+.muted{color:var(--muted)}
+.small{font-size:0.9rem}
+
+.modal{position:fixed;inset:0;display:none;align-items:center;justify-content:center;background:rgba(2,6,23,0.45);z-index:80}
+.modal[aria-hidden="false"]{display:flex}
+.modal-inner{background:#fff;padding:1.25rem;border-radius:12px;max-width:420px;width:100%;text-align:center;position:relative}
+.modal-close{position:absolute;right:1rem;top:1rem;border:0;background:transparent;font-size:1.1rem}
+
+.copyright{padding-top:1rem;color:var(--muted);font-size:0.9rem;text-align:center}
+
+/* screen-reader only helper */
+.visually-hidden{position:absolute !important;height:1px;width:1px;overflow:hidden;clip:rect(1px,1px,1px,1px);white-space:nowrap;border:0;padding:0;margin:-1px}
+
+@media (max-width:980px){
+  .hero-grid{grid-template-columns:1fr}
+  .features-grid{grid-template-columns:1fr}
+  .program-list{grid-template-columns:1fr}
+  .admissions-grid{grid-template-columns:1fr}
+  .carousel-track .card{min-width:100%}
+  .nav{display:none}
+  .mobile-toggle{display:block}
+}
+
+@media (max-width:520px){
+  .container{padding:1rem}
+  .hero-content h1{font-size:1.4rem}
+  .hero-img{height:200px}
+}
