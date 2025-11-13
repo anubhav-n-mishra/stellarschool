@@ -1,4 +1,4 @@
-/* Polished professional styles */
+/* Polished professional styles for React app */
 :root{
   --accent:#0b5cff; /* deep blue */
   --accent-2:#0a3ed6;
@@ -27,21 +27,21 @@ body{margin:0;background:linear-gradient(180deg,var(--bg),#fff);color:#0f172a;li
 .nav a{color:#07205a;text-decoration:none;padding:0.6rem;border-radius:8px}
 .nav a:hover{background:rgba(11,92,255,0.06)}
 .header-actions{display:flex;gap:0.5rem;align-items:center}
-.btn{display:inline-flex;align-items:center;gap:0.5rem;border-radius:10px;padding:0.6rem 1rem;text-decoration:none;border:1px solid transparent;font-weight:600}
+.btn{display:inline-flex;align-items:center;gap:0.5rem;border-radius:10px;padding:0.6rem 1rem;text-decoration:none;border:1px solid transparent;font-weight:600;cursor:pointer}
 .btn.small{padding:0.35rem 0.6rem;font-size:0.9rem}
 .btn-primary{background:var(--accent);color:#fff;box-shadow:0 6px 18px rgba(11,92,255,0.12)}
 .btn-outline{background:transparent;border:1px solid rgba(11,92,255,0.12);color:var(--accent)}
 .btn:focus{outline:3px solid rgba(11,92,255,0.12)}
-.mobile-toggle{display:none;background:transparent;border:0;font-size:1.25rem}
+.mobile-toggle{display:none;background:transparent;border:0;font-size:1.25rem;cursor:pointer}
 
 .hero{padding:3.5rem 0}
 .hero-grid{display:grid;grid-template-columns:1fr 520px;gap:2rem;align-items:center}
 .hero-content h1{font-family:'Playfair Display', serif;font-size:2.4rem;margin:0 0 0.6rem;color:#05204a}
 .lead{color:var(--muted);margin:0 0 1rem;font-size:1.05rem}
 .hero-ctas{display:flex;gap:0.75rem;margin-bottom:1rem}
-.trust-list{display:flex;gap:0.75rem;list-style:none;padding:0;margin:1rem 0 0}
+.trust-list{display:flex;gap:0.75rem;list-style:none;padding:0;margin:1rem 0 0;flex-wrap:wrap}
 .trust-list li{background:#fff;padding:0.5rem 0.75rem;border-radius:10px;box-shadow:0 6px 20px rgba(2,6,23,0.06);font-weight:600}
-.hero-meta{margin-top:0.8rem;display:flex;gap:0.6rem;align-items:center}
+.hero-meta{margin-top:0.8rem;display:flex;gap:0.6rem;align-items:center;flex-wrap:wrap}
 .hero-img{width:100%;height:320px;background-size:cover;background-position:center;border-radius:14px;box-shadow:0 20px 40px rgba(2,6,23,0.06)}
 
 .about h2,.programs h2,.admissions h2,.testimonials h2,.faq h2{margin-top:0}
@@ -64,7 +64,7 @@ body{margin:0;background:linear-gradient(180deg,var(--bg),#fff);color:#0f172a;li
 .testimonial-carousel{position:relative;padding:1rem 3rem}
 .carousel-viewport{overflow:hidden;width:100%}
 .carousel-track{list-style:none;padding:0;margin:0;display:flex;transition:transform 520ms cubic-bezier(.22,.9,.36,1);will-change:transform}
-.carousel-track .card{flex:0 0 100%;box-sizing:border-box;padding:1.5rem 2rem;background:#fff;border-radius:12px;box-shadow:0 12px 36px rgba(2,6,23,0.06);display:flex;align-items:center}
+.carousel-track .card{flex:0 0 100%;box-sizing:border-box;padding:1.5rem 2rem;background:#fff;border-radius:12px;box-shadow:0 12px 36px rgba(2,6,23,0.06);display:flex;flex-direction:column;justify-content:center}
 .carousel-track .card p{margin:0;color:#07205a;font-size:1.05rem;line-height:1.6}
 .carousel-track .card cite{display:block;margin-top:0.6rem;color:var(--muted);font-style:italic}
 .carousel-prev,.carousel-next{position:absolute;top:50%;transform:translateY(-50%);background:transparent;border:0;font-size:1.9rem;color:var(--accent);cursor:pointer;padding:0.25rem}
@@ -79,10 +79,10 @@ body{margin:0;background:linear-gradient(180deg,var(--bg),#fff);color:#0f172a;li
 .muted{color:var(--muted)}
 .small{font-size:0.9rem}
 
-.modal{position:fixed;inset:0;display:none;align-items:center;justify-content:center;background:rgba(2,6,23,0.45);z-index:80}
-.modal[aria-hidden="false"]{display:flex}
+.modal{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(2,6,23,0.45);z-index:80}
+.modal[aria-hidden="true"]{display:none}
 .modal-inner{background:#fff;padding:1.25rem;border-radius:12px;max-width:420px;width:100%;text-align:center;position:relative}
-.modal-close{position:absolute;right:1rem;top:1rem;border:0;background:transparent;font-size:1.1rem}
+.modal-close{position:absolute;right:1rem;top:1rem;border:0;background:transparent;font-size:1.1rem;cursor:pointer}
 
 .copyright{padding-top:1rem;color:var(--muted);font-size:0.9rem;text-align:center}
 
@@ -97,10 +97,13 @@ body{margin:0;background:linear-gradient(180deg,var(--bg),#fff);color:#0f172a;li
   .carousel-track .card{min-width:100%}
   .nav{display:none}
   .mobile-toggle{display:block}
+  .header-actions{display:none}
+  .footer-grid{grid-template-columns:1fr}
 }
 
 @media (max-width:520px){
   .container{padding:1rem}
   .hero-content h1{font-size:1.4rem}
   .hero-img{height:200px}
+  .testimonial-carousel{padding:1rem 2.5rem}
 }
